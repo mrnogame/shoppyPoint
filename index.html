@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageOff Improvement</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <!-- vvv -->
+    <!-- creo un div per il il header che avra' al suo iterno il nome del negozio un <a href=""></a> per l'img 
+    del Carrello,
+    un div per il numero di articoli nel cart ;
+    un div per il costo totale degli art nel cart. -->
+    <div class="header" id="header">
+        <div class="logo">
+            <div class="shopname">
+                <a href="index.html">
+                    <h1>Shoppy Point</h1>
+                    <h2 class="slogan">Shop with style</h2>
+                </a>
+                <img class="basketImg" src="img/Carrello.png" alt="img_car" width="50" >
+                <div class="numArtInCart" id="numArtInCart">0</div> 
+                <div class="basketTotal" id="basketTotal"></div> 
+            </div>
+        </div>
+    </div>
+    
+    <!-- creo un div per il nav bar con la class e data-category 
+    <a href="index.html">Home</a>
+            <a href="#" class="category-link" data-category="phone">Phone</a>
+    che mi permettera' di filtrare gli articoli sencondo la categoria. -->
+    <div class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" class="category-link" data-category="phone">Phone</a>
+            <a href="#" class="category-link" data-category="watch">Watch</a>
+            <a href="#" class="category-link" data-category="computer">Computer</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+    
+    <!-- creare un div con id et class shop per generare il shop con le funzione generaShop.
+    e dentro ci deve essere metto  <div class="shopItems" id="shopItems">
+        <div class="card" id="card">
+            <img src="" alt="" class="prodImg" width="200px">
+            <h2 class="price">Price: --- €</h2>
+            <div class="button-group">
+                <button onclick="showDetails('${x.id}')" class="desc">Details</button><br />
+                <button onclick="add('${x.id}')" class="addTocar" id="addToCar">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>  -->
+    <div class="shop" id="shop"></div>  
+
+    <!-- <div class="shopItems" id="${x.id}">
+        <div class="card" id="card">
+            <img src=${x.img} alt="" class="prodImg" width="200px">
+            <h2 class="price">Price: ${x.price} €</h2>
+            <div class="button-group">
+                <button onclick="showDetails('${x.id}')" class="desc">Details</button><br />
+                <button onclick="add('${x.id}')" class="addTocar" id="addToCar">Add To Cart</button>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- creo un div per il modal dei dettagli. -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <p id="modalDescription"></p>
+            <p id="modalPrice" class="modal-price"></p>
+        </div>
+    </div>
+
+    <!-- creo un div qua per gestire la visualizzaizone del carrallo con 2 buttoni onclick per procedere al
+    pagamento o cancellare tutti i prodotti dal cart. -->
+    <div id="selectedProductsContainer" class="selected-products-container"></div>
+    <!-- creo un div per gestire i prodotti selezionati --> 
+    <div id="selectedProducts"></div>
+      <!-- creo un div per il total dei art nel cart  -->
+        <div id="basketTotal" class="basket-total"></div>
+        <!-- un div per getirre i 2 buttoni del cart  -->
+       <!-- questa parte non va messa nel index 
+        <div class="cart-buttons">
+          <button onclick="clearCart()" class="clearCart">Clear Cart</button>
+          <h3>Your Cart</h3>
+          <button onclick="proceedToPayment()" class="proceedToPayment">Proceed to Payment</button>
+        </div> -->
+        
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
